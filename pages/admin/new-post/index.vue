@@ -10,9 +10,11 @@
     components: {NewPostForm},
     layout: 'admin',
     methods: {
-      onSubmit(post) {
-        console.log('Post added!');
-        console.log(post);
+      async onSubmit(post) {
+        // console.log('Post added!');
+        // console.log(post);
+        await this.$store.dispatch('addPost', post);
+        this.$router.push('/admin');
       }
     }
   }
