@@ -1,6 +1,9 @@
 <template>
   <!--    posts    -->
-  <PostList :posts="posts"/>
+  <PostList
+    :posts="posts"
+    :admin="true"
+  />
 </template>
 
 <script>
